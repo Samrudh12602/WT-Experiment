@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+header {
+	background-color: white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    }
+    
+    .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff7f00;
+    text-decoration: none;
+    }
+    
+    nav ul {
+    display: flex;
+    list-style: none;
+    }
+    
+    nav ul li {
+    margin-right: 20px;
+    }
+    
+    nav ul li a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+    background-color: #ff7f00;
+    color: white;
+    border-radius: 5px;
+    }
+    
+    /* Footer Styles */
+    
+    footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    footer a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    footer a:hover {
+    text-decoration: underline;
+    }
+
+main {
+    padding: 20px;
+}
+
+.menu-section {
+    text-align: center;
+}
+
+.menu h1 {
+    margin-bottom: 40px;
+}
+
+.menu-category {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+.menu-category h2 {
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li span:first-child {
+    flex: 1;
+    text-align: left;
+}
+
+.menu li span:last-child {
+    flex: 1;
+    text-align: right;
+}

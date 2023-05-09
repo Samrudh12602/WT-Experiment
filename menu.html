@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MealMate - Menu</title>
+  <link rel="stylesheet" href="menu_style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home.html">MealMate</a>
+      </div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="order.html">Place Order</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="payment.html">Payment Details</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="menu-section">
+      <h1>Our Menu</h1>
+      <div class="search-bar">
+        <label for="search-input">Search: </label>
+        <input type="text" id="search-input" placeholder="Search for a dish...">
+      </div>
+      <div class="menu">
+        <div class="menu-category">
+          <h2>Chinese</h2>
+          <ul>
+            <li><input type="checkbox" name="item[]" value="Spring Rolls" data-price="5.99">Spring Rolls<span>£5.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Hot and Sour Soup" data-price="4.99">Hot and Sour Soup<span>£4.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Kung Pao Chicken" data-price="10.99">Kung Pao Chicken<span>£10.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Beef and Broccoli Stir-Fry" data-price="12.99">Beef and Broccoli Stir-Fry<span>£12.99</span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <h2>Goan</h2>
+          <ul>
+            <li><input type="checkbox" name="item[]" value="Fish Curry" data-price="7.99">Fish Curry<span>£7.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Pork Vindaloo" data-price="6.99">Pork Vindaloo<span>£6.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Chicken Xacuti" data-price="8.99">Chicken Xacuti<span>£8.99</span></li>
+          </ul>
+        </div>
+        <div class="menu-category">
+          <h2>Indian</h2>
+          <ul>
+            <li><input type="checkbox" name="item[]" value="Butter Chicken" data-price="6.99">Butter Chicken<span>£6.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Vegetable Biryani" data-price="5.99">Vegetable Biryani<span>£5.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Samosa" data-price="4.99">Samosa<span>£4.99</span></li>
+            </ul>
+            </div>
+            <div class="menu-category">
+            <h2>Thai</h2>
+            <ul>
+            <li><input type="checkbox" name="item[]" value="Pad Thai" data-price="8.99">Pad Thai<span>£8.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Green Curry" data-price="7.99">Green Curry<span>£7.99</span></li>
+            <li><input type="checkbox" name="item[]" value="Tom Yum Soup" data-price="8.99">Tom Yum Soup<span>£8.99</span></li>
+            </ul>
+            </div>
+            </div>
+            <div class="order-details">
+            <h2>Order Details</h2>
+            <form id="order-form" action="process_order.php" method="post">
+            <ul id="order-list">
+            <?php
+                     if (isset($_POST['item'])) {
+                       $items = $_POST['item'];
+                       $totalPrice = 0;
+                       foreach ($items as $item) {
+                         $itemName = $item;
+                         $itemPrice = $_POST['price'][$itemName];
+                         $totalPrice += $itemPrice;
+                         echo "<li>$itemName: £$itemPrice</li>";
+                       }
+                       echo '<input type="hidden" name="totalPrice" value="' . $totalPrice . '">';
+                     }
+                     ?>
+            </ul>
+            <p>Total: £<span id="total-price">
+            <?php
+                     if (isset($_POST['item'])) {
+                       echo $totalPrice;
+                     } else {
+                       echo '0.00';
+                     }
+            ?>
+            </span></p>
+            <button type="submit">Place Order</button>
+            </form>
+            </div>
+            </section>
+            
+              </main>
+              <footer>
+                <p>© 2023 MealMate. All rights reserved. | website by [Your Name]</p>
+              </footer>
+    <script src="menu_script.js"></script>
+  </body>
+</html>

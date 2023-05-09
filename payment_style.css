@@ -1,0 +1,131 @@
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+form {
+	display: grid;
+	grid-gap: 20px;
+}
+
+label, input {
+	font-size: 16px;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.expiry-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+
+button[type="submit"] {
+	background-color: #ff8c00;
+	color: #fff;
+	font-size: 16px;
+	padding: 15px;
+	border: none;
+	border-radius: 3px;
+	width: 100%;
+	cursor: pointer;
+	margin-top: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1px;
+    text-align: center;
+    }
+    
+    footer a {
+    color: #fff;
+    text-decoration: none;
+    }
+    footer p{
+        font-size: 20px;
+    }
+    footer a:hover {
+    text-decoration: underline;
+    }
+    button {
+        background-color: #ff7f00;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #ff9333;
+    }
+    
+    /* Header Styles */
+    
+    header {
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        }
+        
+        .logo a {
+        font-size: 30px;
+        font-weight: bold;
+        color: #ff7f00;
+        text-decoration: none;
+        }
+        
+        nav ul {
+        display: flex;
+        list-style: none;
+        }
+        
+        nav ul li {
+        margin-right: 20px;
+        }
+        
+        nav ul li a {
+        font-size: 20px;
+        color: #333;
+        text-decoration: none;
+        padding: 5px;
+        transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+        background-color: #ff7f00;
+        color: white;
+        border-radius: 5px;
+        }

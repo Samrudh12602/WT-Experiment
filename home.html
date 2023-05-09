@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MealMate - Home</title>
+	<link rel="stylesheet" href="home_style.css">
+	<script src="home_script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="home.html">MealMate</a>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Place Order</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="payment.html">Payment Details</a></li>
+        </ul>
+    </nav>
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1>Welcome to MealMate</h1>
+			<p>Order delicious food online from the comfort of your own home.</p>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Our Specialties</h2>
+		<div class="container specialties-section">
+		<div class="specialties">
+			<div class="specialty">
+				<img src="chinese.jpeg" alt="Chinese Cuisine">
+				<h3>Chinese Cuisine</h3>
+				<p>Experience the flavors of China with our authentic dishes.</p>
+				<button onclick="viewMenu('chinese')">View Menu</button>
+			</div>
+			<div class="specialty">
+				<img src="indian.jpeg" alt="Indian Cuisine">
+				<h3>Indian Cuisine</h3>
+				<p>Indulge in the spices and aromas of India with our dishes.</p>
+				<button onclick="viewMenu('indian')">View Menu</button>
+			</div>
+			<div class="specialty">
+				<img src="thai.webp" alt="Thai Cuisine">
+				<h3>Thai Cuisine</h3>
+				<p>Discover the unique flavors and textures of Thailand with our dishes.</p>
+				<button onclick="viewMenu('thai')">View Menu</button>
+			</div>
+			<div class="specialty">
+				<img src="goan.jpeg" alt="Goan Cuisine">
+				<h3>Goan Cuisine</h3>
+				<p>Taste the coastal flavors of Goa with our authentic dishes.</p>
+				<button onclick="viewMenu('goan')">View Menu</button>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Why Choose MealMate?</h2>
+		<div class="features">
+			<div class="feature">
+				<img src="quality.jpeg" alt="Quality">
+				<h3>Quality Ingredients</h3>
+				<p>We use only the freshest and finest ingredients to prepare our dishes.</p>
+			</div>
+			<div class="feature">
+				<img src="convinience.jpeg" alt="Convenience">
+				<h3>Convenience</h3>
+				<p>Order online and enjoy delicious food from the comfort of your own home.</p>
+			</div>
+			<div class="feature">
+				<img src="variety.jpeg" alt="Variety">
+				<h3>Variety</h3>
+				<p>Choose from a wide selection of dishes from various cuisines.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h2>Customer Reviews</h2>
+		<div class="reviews">
+			<div class="review">
+				<h3>John Doe</h3>
+				<p>"The food from MealMate is absolutely delicious! I love the variety of cuisines they offer."</p>
+			</div>
+			<div class="review">
+				<h3>Jane Smith</h3>
+				<p>"I've been ordering from MealMate for months now, and I'm always satisfied with the taste and quality of the food."</p>
+			</div>
+			<div class="review">
+				<h3>Michael Johnson</h3>
+				<p>"MealMate provides excellent customer service and their delivery is always prompt. Highly recommended!"</p>
+			</div>
+		</div>
+	</div>
+	<div class="slideshow-container">
+		<div class="mySlides">
+		  <img src="quality.jpeg" style="width:100%">
+		</div>
+	  
+		<div class="mySlides">
+		  <img src="variety.jpeg" style="width:100%">
+		</div>
+	  
+		<div class="mySlides">
+		  <img src="indian.jpeg" style="width:100%">
+		</div>
+	  </div><br><br>
+	  <script src="slideshow.js"></script>	  
+	  <footer>
+		<p>Contact Us: mealmate@gmail.com | Phone: 779-888-9355</p>
+		<p>&copy;MealMate. All rights reserved. <?php echo date("Y"); ?></p>
+	</footer>
+</body>
+</html>
